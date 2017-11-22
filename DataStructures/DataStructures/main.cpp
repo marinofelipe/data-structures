@@ -15,13 +15,27 @@ int main(int numargs, const char * args[]) {
     //argv -> cards to be sorted
     
     //0 beign the first index and 5 the size of cards array - 1
-    for (int cardIndex = 0; cardIndex < 5; cardIndex++) {
+    for (int cardIndex = 1; cardIndex < 6; cardIndex++) {
         int card = cards[cardIndex];
+        
+        //printing current card
+        std::string text = "current card to be sorted: ";
+        text += std::to_string(card);
+        std::cout << text << std::endl;
+        
         //insert into sorted sequence
         int sortingIndex = cardIndex - 1;
-//        while (<#condition#>) {
-//            <#statements#>
-//        }
+        while (sortingIndex >= 0 && cards[sortingIndex] > card) {
+            cards[sortingIndex + 1] = cards[sortingIndex];
+            sortingIndex--;
+        }
+        cards[sortingIndex + 1] = card;
+    }
+    
+    //prints each element
+    std::cout << "Sorted hand of cards: " << std::endl;
+    for (const auto& e : cards) {
+        std::cout << e << std::endl;
     }
     
     return 0;
