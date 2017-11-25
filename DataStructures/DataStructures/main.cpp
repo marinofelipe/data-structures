@@ -8,13 +8,17 @@
 
 #include <iostream>
 
-int cards[6] = {5, 2, 4 , 6, 1, 3};
+/*
+///INSERTION SORT - NONDECREASING ORDER///
+*/
+
+int cards[6] = {31, 41, 59 , 26, 41, 58};
 
 int main(int numargs, const char * args[]) {
     //argc -> number of elements
     //argv -> cards to be sorted
     
-    //0 beign the first index and 5 the size of cards array - 1
+    //0 is the first index and 5 the size of cards array - 1
     for (int cardIndex = 1; cardIndex < 6; cardIndex++) {
         int card = cards[cardIndex];
         
