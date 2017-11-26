@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54984C41FCA297900965404 /* LinearSearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D54984C31FCA297900965404 /* LinearSearch.cpp */; };
 		D5E588201FC3AD4C004114A4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5E5881F1FC3AD4C004114A4 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D54984BE1FCA28B300965404 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		D5E5881A1FC3AD4C004114A4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,11 +33,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D5E5881C1FC3AD4C004114A4 /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54984C21FCA28B300965404 /* Linear search */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Linear search"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54984C31FCA297900965404 /* LinearSearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearSearch.cpp; sourceTree = "<group>"; };
+		D5E5881C1FC3AD4C004114A4 /* Insertion Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Insertion Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E5881F1FC3AD4C004114A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D54984BD1FCA28B300965404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5E588191FC3AD4C004114A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,7 +68,8 @@
 		D5E5881D1FC3AD4C004114A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5E5881C1FC3AD4C004114A4 /* DataStructures */,
+				D5E5881C1FC3AD4C004114A4 /* Insertion Sort */,
+				D54984C21FCA28B300965404 /* Linear search */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E5881F1FC3AD4C004114A4 /* main.cpp */,
+				D54984C31FCA297900965404 /* LinearSearch.cpp */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -65,9 +86,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5E5881B1FC3AD4C004114A4 /* DataStructures */ = {
+		D54984BA1FCA28B300965404 /* Linear search */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5E588231FC3AD4C004114A4 /* Build configuration list for PBXNativeTarget "DataStructures" */;
+			buildConfigurationList = D54984BF1FCA28B300965404 /* Build configuration list for PBXNativeTarget "Linear search" */;
+			buildPhases = (
+				D54984BB1FCA28B300965404 /* Sources */,
+				D54984BD1FCA28B300965404 /* Frameworks */,
+				D54984BE1FCA28B300965404 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Linear search";
+			productName = DataStructures;
+			productReference = D54984C21FCA28B300965404 /* Linear search */;
+			productType = "com.apple.product-type.tool";
+		};
+		D5E5881B1FC3AD4C004114A4 /* Insertion Sort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5E588231FC3AD4C004114A4 /* Build configuration list for PBXNativeTarget "Insertion Sort" */;
 			buildPhases = (
 				D5E588181FC3AD4C004114A4 /* Sources */,
 				D5E588191FC3AD4C004114A4 /* Frameworks */,
@@ -77,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = DataStructures;
+			name = "Insertion Sort";
 			productName = DataStructures;
-			productReference = D5E5881C1FC3AD4C004114A4 /* DataStructures */;
+			productReference = D5E5881C1FC3AD4C004114A4 /* Insertion Sort */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,6 +129,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Felipe Lefèvre Marino";
 				TargetAttributes = {
+					D54984BA1FCA28B300965404 = {
+						ProvisioningStyle = Automatic;
+					};
 					D5E5881B1FC3AD4C004114A4 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -109,12 +150,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5E5881B1FC3AD4C004114A4 /* DataStructures */,
+				D5E5881B1FC3AD4C004114A4 /* Insertion Sort */,
+				D54984BA1FCA28B300965404 /* Linear search */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D54984BB1FCA28B300965404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D54984C41FCA297900965404 /* LinearSearch.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5E588181FC3AD4C004114A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +176,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D54984C01FCA28B300965404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9MK4PBNUW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D54984C11FCA28B300965404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9MK4PBNUW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D5E588211FC3AD4C004114A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -250,6 +318,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D54984BF1FCA28B300965404 /* Build configuration list for PBXNativeTarget "Linear search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D54984C01FCA28B300965404 /* Debug */,
+				D54984C11FCA28B300965404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D5E588171FC3AD4B004114A4 /* Build configuration list for PBXProject "DataStructures" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -259,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5E588231FC3AD4C004114A4 /* Build configuration list for PBXNativeTarget "DataStructures" */ = {
+		D5E588231FC3AD4C004114A4 /* Build configuration list for PBXNativeTarget "Insertion Sort" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5E588241FC3AD4C004114A4 /* Debug */,
