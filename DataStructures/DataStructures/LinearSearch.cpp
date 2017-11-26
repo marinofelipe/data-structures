@@ -20,17 +20,15 @@ using namespace std;
 ///  indexes 2..last    - numbers that will be part of the sequence to be searched
 ////
 
-int main(int numargs, const char * args[]) {
-    //value v
+void setValue(unsigned int * value, const char * arg) {
     stringstream strValue;
-    strValue << args[1];
+    strValue << arg;
     
-    unsigned int v;
-    strValue >> v;
-    cout << "value = " + to_string(v) << endl;
-    
-    //array of elements
-    int A[numargs - 2];
+    strValue >> *value;
+    cout << "value = " + to_string(*value) << endl;
+}
+
+void setArrayOfNumbers(int numargs, const char * args[], int * array) {
     cout << "Array A:";
     string txt = "";
     for (int index = 2; index < numargs; index ++) {
@@ -41,12 +39,23 @@ int main(int numargs, const char * args[]) {
         strValue >> v;
         
         txt += " " + to_string(v);
-        A[index - 2] = v;
+        array[index - 2] = v;
     }
     cout << txt << endl;
+}
+
+int main(int numargs, const char * args[]) {
+    //value v
+    unsigned int v;
+    setValue(&v, args[1]);
     
-    //0 is the first index and 5 the size of cards array - 1
-    for (int index = 0; index < 6; index++) {
+    //array of elements
+    const int size = numargs - 2;
+    int A[size];
+    setArrayOfNumbers(numargs, args, A);
+    
+    //iterates array to see if it contains value
+    for (int index = 0; index < size; index++) {
         //printing current sequence number
         string text = "current number: ";
         text += to_string(A[index]);
