@@ -15,21 +15,12 @@ using namespace std;
 /// LINEAR SEARCH ///
 */
 
-int A[6] = {31, 41, 59 , 26, 41, 58};
+////This program receives as arguments:
+///  index 1            - value to be searched in the array
+///  indexes 2..last    - numbers that will be part of the sequence to be searched
+////
 
 int main(int numargs, const char * args[]) {
-    //argc -> number of elements
-    //argv -> elements itself
-    ///argv contains a value to be compared with the array. The value is defined in the scheme arguments
-    
-    //prints each array element
-    cout << "Array A:";
-    string txt = "";
-    for (const auto& e : A) {
-        txt += " " + to_string(e);
-    }
-    cout << txt << endl;
-    
     //value v
     stringstream strValue;
     strValue << args[1];
@@ -37,6 +28,22 @@ int main(int numargs, const char * args[]) {
     unsigned int v;
     strValue >> v;
     cout << "value = " + to_string(v) << endl;
+    
+    //array of elements
+    int A[numargs - 2];
+    cout << "Array A:";
+    string txt = "";
+    for (int index = 2; index < numargs; index ++) {
+        stringstream strValue;
+        strValue << args[index];
+        
+        unsigned int v;
+        strValue >> v;
+        
+        txt += " " + to_string(v);
+        A[index - 2] = v;
+    }
+    cout << txt << endl;
     
     //0 is the first index and 5 the size of cards array - 1
     for (int index = 0; index < 6; index++) {
